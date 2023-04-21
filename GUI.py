@@ -23,7 +23,7 @@ class Home(QWidget):
 
     def initUI(self):
         self.label = QLabel(self)
-        self.label.setPixmap(QPixmap("/Users/minseokey/Kookmin/BDLT/Project/BDLT_Project/static/즐겁다 마참내.png"))
+        self.label.setPixmap(QPixmap("static/즐겁다 마참내.png"))
         self.label.setGeometry(QRect(0, 0, 768, 402))
         self.titletext = QLabel(self)
         self.titletext.setText("MZ 세대의 선택은?")  # 텍스트 변환
@@ -104,11 +104,11 @@ class Result(QWidget):
 
     def answerUI(self, ret, in1, in2, in3):
         self.label = QLabel(self)
-        self.label.setPixmap(QPixmap("/Users/minseokey/Kookmin/BDLT/Project/BDLT_Project/static/즐겁다 마참내.png"))
+        self.label.setPixmap(QPixmap("static/즐겁다 마참내.png"))
         self.label.setGeometry(QRect(0, 0, 768, 402))
 
         self.label = QLabel(self)
-        self.label.setPixmap(QPixmap("/Users/minseokey/Kookmin/BDLT/Project/BDLT_Project/static/graph.png"))
+        self.label.setPixmap(QPixmap("static/graph.png"))
         self.label.setGeometry(QRect(120, 20, 768, 390))
 
         self.text = QLabel(self)
@@ -155,11 +155,11 @@ class Network(QWidget):
 
     def networkUI(self,subject):
         self.label = QLabel(self)
-        self.label.setPixmap(QPixmap("/Users/minseokey/Kookmin/BDLT/Project/BDLT_Project/static/즐겁다 마참내.png"))
+        self.label.setPixmap(QPixmap("static/즐겁다 마참내.png"))
         self.label.setGeometry(QRect(0, 0, 768, 402))
 
         self.label = QLabel(self)
-        self.label.setPixmap(QPixmap("/Users/minseokey/Kookmin/BDLT/Project/BDLT_Project/static/newimage.png"))
+        self.label.setPixmap(QPixmap("static/newimage.png"))
         self.label.setGeometry(QRect(0, 0, 768, 402))
 
         self.text = QLabel(self)

@@ -12,7 +12,7 @@ def text_clearing(text):
     return result
 
 
-f = open("data/return2.txt", "r", encoding='utf-8')
+f = open("data/return.txt", "r", encoding='utf-8')
 token = []
 text = f.readlines()
 for i in text:
