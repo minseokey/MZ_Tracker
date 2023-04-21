@@ -1,5 +1,6 @@
 # MZ_Tracker
 MZ 세대의 취향을 알아보자
+<br>
 데이터는 차차 업데이트 하도록 하겠습니다.
 
 ![스크린샷_2023-04-14_오후_9 54 19](https://user-images.githubusercontent.com/91869302/233558348-37001ee4-e6a1-47c3-820b-1bfb4d45f1f3.png)
