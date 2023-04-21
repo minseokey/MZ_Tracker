@@ -1,5 +1,3 @@
-
-
 f = open("data/return2.txt", "r", encoding='utf-8')
 token = []
 text = f.readlines()

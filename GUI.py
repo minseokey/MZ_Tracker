@@ -7,8 +7,7 @@ from PyQt6.QtGui import QPixmap
 from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton, QMessageBox
 from PyQt6 import QtGui
 from gensim.models import Word2Vec
-
-from BDLT_Project.modelvec import similarity, visualization, setEdges_simWords
+from modelvec import similarity, visualization, setEdges_simWords
 
 model = Word2Vec.load('word2vec-TeenInstagram.model')
 

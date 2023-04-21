@@ -58,8 +58,8 @@ driver = webdriver.Chrome('chromedriver.exe')
 driver.get('https://www.instagram.com')
 time.sleep(2)
 
-email = ""# 인스타그램 아이디 입력
-password = ""# 인스타그램 비밀번호 입력
+email = "lms990427@naver.com" # 인스타그램 아이디 입력
+password = "dlalstjr2@" # 인스타그램 비밀번호 입력
 input = driver.find_elements(By.TAG_NAME, 'input')
 
 input[0].send_keys(email)
@@ -76,7 +76,7 @@ btn_later2 = driver.find_element(By.CLASS_NAME, '_a9--._a9_1')
 btn_later2.click()
 time.sleep(1)
 
-word = ""# 검색할 헤쉬테그 입력.
+word = "10대"# 검색할 헤쉬테그 입력.
 url = insta_searching(word)
 
 driver.get(url)
