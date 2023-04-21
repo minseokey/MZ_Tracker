@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-from konlp.kma.klt2000 import klt2000
+from konlp.kma.klt2023 import klt2023
 import demoji
 
 
@@ -54,7 +54,8 @@ def move_next(driver):
     time.sleep(1)
 
 
-driver = webdriver.Chrome('chromedriver.exe')
+# driver = webdriver.Chrome('chromedriver.exe')
+driver = set_chrome_driver()
 driver.get('https://www.instagram.com')
 time.sleep(2)
 
@@ -86,7 +87,7 @@ select_first(driver)
 
 result = []
 target = 3
-k = klt2000()
+k = klt2023()
 
 try:
     for i in range(target):
