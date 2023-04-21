@@ -22,20 +22,17 @@ def set_chrome_driver():
     return driver
 
 
-# OK
 def insta_searching(word):
     url = "https://www.instagram.com/explore/tags/" + str(word)
     return url
 
 
-# OK
 def select_first(driver):
     first = driver.find_element(By.CLASS_NAME, "_aagu")
     first.click()
     time.sleep(2)
 
 
-# OK
 def get_content(driver):
     html = driver.page_source
     soup = BeautifulSoup(html, 'lxml')
@@ -47,36 +44,22 @@ def get_content(driver):
         content = ''
 
     tags = re.findall(r'#[^\s#,\\]+', content)
-
-    # date = soup.select('time._aage')[0]['datetime'][:10]
-    #
-    # try:
-    #     like = soup.select('div._aacl._aaco._aacw._aacx._aada._aada')[0].finall('span')[-1].text
-    # except:
-    #     like = 0
-    #
-    # try:
-    #     place = soup.select('div._aagm')[0].text
-    # except:
-    #     place = ''
-    # data = [content,date,like,place,tags]
     data = [content, tags if tags else []]
     return data
 
 
-# OK
 def move_next(driver):
     right = driver.find_element(By.CLASS_NAME, "_aaqg._aaqh")
     right.click()
-    time.sleep(2)
+    time.sleep(1)
 
 
 driver = webdriver.Chrome('chromedriver.exe')
 driver.get('https://www.instagram.com')
 time.sleep(2)
 
-email = 'lms990427@naver.com'
-password = 'dlalstjr2@'
+email = ""# 인스타그램 아이디 입력
+password = ""# 인스타그램 비밀번호 입력
 input = driver.find_elements(By.TAG_NAME, 'input')
 
 input[0].send_keys(email)
@@ -93,7 +76,7 @@ btn_later2 = driver.find_element(By.CLASS_NAME, '_a9--._a9_1')
 btn_later2.click()
 time.sleep(1)
 
-word = "20대"
+word = ""# 검색할 헤쉬테그 입력.
 url = insta_searching(word)
 
 driver.get(url)
@@ -102,7 +85,7 @@ time.sleep(10)
 select_first(driver)
 
 result = []
-target = 3000
+target = 3
 k = klt2000()
 
 try:
@@ -112,7 +95,6 @@ try:
             result.append(data)
             move_next(driver)
         except:
-            print("exe")
             time.sleep(1)
             move_next(driver)
         time.sleep(1)

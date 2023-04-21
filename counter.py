@@ -1,6 +1,6 @@
 
 
-f = open("../KLT2000-TestVersion/EXE/return2 복사본.txt", "r", encoding='utf-8')
+f = open("data/return2.txt", "r", encoding='utf-8')
 token = []
 text = f.readlines()
 def text_clearing(text):
@@ -20,3 +20,4 @@ a = 0
 for i in token:
     a += len(i)
 print(a)
+f.close()
